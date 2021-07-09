@@ -1,0 +1,15 @@
+ <%= form_for :t , Routes.test_path(@conn, :index), fn f -> %>
+
+    <%= text_input(f, :query) %>
+    <%=# submit f,  "Submit" %>
+<% end %>
+
+<%= for {k,v} <- @test do %>
+        <table>
+        <tr>
+        <th> <%= k %> </th>
+        </tr>
+        <tr>
+        <td> <%= v %> </th>
+        </tr>
+    <% end %>

@@ -17,6 +17,9 @@ defmodule StocksWeb.Router do
   scope "/", StocksWeb do
     pipe_through :browser
 
+    post "/test", TestController, :index
+    resources "/test", TestController
+
     live "/", PageLive, :index
   end
 
